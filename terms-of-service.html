@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Terms of Service for OneVictoria Resident Hub — rules for accounts, events, volunteering, and donations in the Municipality of Victoria, Tarlac." />
+    <title>Terms of Service · OneVictoria</title>
+    <link rel="shortcut icon" href="gemini-svg%20(1).svg" type="image/x-icon" />
+    <style>
+        :root {
+            --blue: #003B71;
+            --blue-hover: #002A52;
+            --blue-soft: #E6EEF5;
+            --gold: #F2A900;
+            --gold-dark: #D49300;
+            --gold-soft: #FFF6E0;
+            --dark: #001F3F;
+            --light: #E8F0FE;
+            --accent: #005B9F;
+            --ink: #0B1C2C;
+            --body: #334155;
+            --muted: #64748B;
+            --border: #E2E8F0;
+            --canvas: #F5F7FA;
+            --surface: #FFFFFF;
+            --surface-2: #EEF3F8;
+            --success: #0D7A5F;
+            --success-bg: #E6F6F1;
+            --warning: #B45309;
+            --warning-bg: #FEF3C7;
+            --danger: #B42318;
+            --danger-bg: #FEE4E2;
+            --info: #026AA2;
+            --info-bg: #E0F2FE;
+            --header-h: 56px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Inter, Segoe UI, Helvetica, Arial, sans-serif;
+            background: var(--canvas);
+            color: var(--body);
+            font-size: 14.5px;
+            line-height: 1.55;
+            min-height: 100vh;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--blue);
+            text-decoration: underline;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid var(--gold);
+            outline-offset: 2px;
+        }
+
+        .skip {
+            position: absolute;
+            left: 12px;
+            top: -40px;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-weight: 700;
+            z-index: 80;
+        }
+
+        .skip:focus {
+            top: 12px;
+        }
+
+        header.app {
+            position: sticky;
+            top: 0;
+            z-index: 40;
+            height: var(--header-h);
+            background: var(--dark);
+            color: #fff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .app-inner {
+            max-width: 1080px;
+            margin: 0 auto;
+            height: 100%;
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            text-decoration: none;
+            min-width: 0;
+        }
+
+        .brand:hover {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .seal {
+            width: 30px;
+            height: 30px;
+            border-radius: 9px;
+            flex-shrink: 0;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            display: grid;
+            place-items: center;
+        }
+
+        .seal svg {
+            width: 15px;
+            height: 15px;
+            fill: var(--dark);
+        }
+
+        .brand-name {
+            font-weight: 800;
+            font-size: 14px;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-sub {
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.55);
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 7px 12px;
+            border-radius: 9px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .back:hover {
+            background: rgba(255, 255, 255, 0.14);
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .back svg {
+            width: 12px;
+            height: 12px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .wrap {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 20px 16px 40px;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 220px minmax(0, 1fr);
+            gap: 20px;
+            align-items: start;
+        }
+
+        aside.toc {
+            position: sticky;
+            top: calc(var(--header-h) + 16px);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 14px 12px;
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+            max-height: calc(100vh - var(--header-h) - 32px);
+            overflow: auto;
+        }
+
+        .toc h2 {
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            font-weight: 800;
+            padding: 0 6px 8px;
+        }
+
+        .toc a {
+            display: block;
+            color: var(--body);
+            text-decoration: none;
+            font-size: 12.5px;
+            font-weight: 600;
+            padding: 5px 8px;
+            border-radius: 8px;
+        }
+
+        .toc a:hover {
+            background: var(--blue-soft);
+            color: var(--blue);
+        }
+
+        .toc a span {
+            color: var(--gold-dark);
+            font-variant-numeric: tabular-nums;
+            margin-right: 6px;
+        }
+
+        article.doc {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+            overflow: hidden;
+        }
+
+        .doc-hero {
+            background: var(--blue);
+            color: #fff;
+            padding: 22px 22px 18px;
+            position: relative;
+        }
+
+        .doc-hero::after {
+            content: "";
+            position: absolute;
+            right: -30px;
+            top: -40px;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(242, 169, 0, 0.28), transparent 70%);
+        }
+
+        .kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 6px;
+        }
+
+        .doc-hero h1 {
+            font-size: 26px;
+            letter-spacing: -0.035em;
+            line-height: 1.15;
+        }
+
+        .lede {
+            margin-top: 6px;
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 13.5px;
+            max-width: 58ch;
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 14px;
+        }
+
+        .pill {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 9px;
+            border-radius: 999px;
+        }
+
+        .doc-body {
+            padding: 8px 22px 22px;
+        }
+
+        section.block {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+            scroll-margin-top: calc(var(--header-h) + 12px);
+        }
+
+        section.block:last-of-type {
+            border-bottom: 0;
+        }
+
+        .block h2 {
+            color: var(--blue);
+            font-size: 15.5px;
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .num {
+            color: var(--gold-dark);
+            font-variant-numeric: tabular-nums;
+            font-size: 13px;
+            min-width: 1.6em;
+        }
+
+        .block p {
+            margin: 0 0 8px;
+        }
+
+        .block p:last-child {
+            margin-bottom: 0;
+        }
+
+        strong {
+            color: var(--ink);
+            font-weight: 700;
+        }
+
+        .callout {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            border-radius: 10px;
+            padding: 10px 12px;
+            margin: 10px 0 4px;
+            font-size: 13px;
+        }
+
+        .callout.gold {
+            background: var(--gold-soft);
+            color: #7A4E00;
+            border: 1px solid #F3D98A;
+        }
+
+        .callout.ok {
+            background: var(--success-bg);
+            color: #065F46;
+            border: 1px solid #B7E4D4;
+        }
+
+        .callout.warn {
+            background: var(--warning-bg);
+            color: #92400E;
+            border: 1px solid #F5D38A;
+        }
+
+        .callout.danger {
+            background: var(--danger-bg);
+            color: #7F1D1D;
+            border: 1px solid #FECDCA;
+        }
+
+        .callout.info {
+            background: var(--info-bg);
+            color: #075985;
+            border: 1px solid #BAE6FD;
+        }
+
+        .callout svg {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .card {
+            background: var(--surface-2);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 10px 12px;
+        }
+
+        .card h3 {
+            color: var(--blue);
+            font-size: 13px;
+            margin-bottom: 3px;
+        }
+
+        .card p {
+            font-size: 12.5px;
+            color: var(--muted);
+            margin: 0;
+        }
+
+        .uses {
+            list-style: none;
+            display: grid;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .uses li {
+            background: var(--surface-2);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 8px 10px 8px 12px;
+            border-left: 3px solid var(--gold);
+            font-size: 13.5px;
+        }
+
+        .ban {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .ban li {
+            background: #FFF8F8;
+            border: 1px solid #FCE4E4;
+            border-radius: 10px;
+            padding: 8px 10px;
+            font-size: 13px;
+            color: #7F1D1D;
+        }
+
+        .contact {
+            background: linear-gradient(180deg, var(--blue-soft), #fff);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 16px;
+        }
+
+        .contact .who {
+            grid-column: 1 / -1;
+            color: var(--blue);
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
+
+        .row {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+            font-size: 13px;
+        }
+
+        .row svg {
+            width: 13px;
+            height: 13px;
+            fill: var(--accent);
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        footer.site {
+            margin-top: 18px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-weight: 600;
+        }
+
+        .links .here {
+            color: var(--blue);
+        }
+
+        @media (max-width: 860px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            aside.toc {
+                position: static;
+                padding: 12px;
+                max-height: none;
+            }
+
+            .toc-links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4px;
+            }
+
+            .toc a {
+                padding: 5px 8px;
+                background: var(--surface-2);
+                font-size: 12px;
+            }
+
+            .cards,
+            .contact,
+            .ban {
+                grid-template-columns: 1fr;
+            }
+
+            .doc-hero {
+                padding: 18px 16px 16px;
+            }
+
+            .doc-hero h1 {
+                font-size: 22px;
+            }
+
+            .doc-body {
+                padding: 4px 16px 18px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .brand-sub {
+                display: none;
+            }
+
+            .back span {
+                display: none;
+            }
+        }
+
+        @media print {
+
+            header.app,
+            aside.toc,
+            footer.site,
+            .skip {
+                display: none !important;
+            }
+
+            body,
+            .doc {
+                background: #fff;
+                box-shadow: none;
+                border: 0;
+            }
+
+            .wrap,
+            .layout {
+                display: block;
+                padding: 0;
+                max-width: none;
+            }
+
+            .doc-hero {
+                background: #fff;
+                color: var(--blue);
+                padding: 0 0 12px;
+            }
+
+            .doc-hero .lede,
+            .pill {
+                color: var(--body);
+            }
+
+            .kicker {
+                color: var(--gold-dark);
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip" href="#terms">Skip to terms</a>
+
+    <header class="app">
+        <div class="app-inner">
+            <a class="brand" href="index.html">
+                <div class="seal" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M4 10l8-6 8 6v10H4V10zm8 1a3 3 0 100 6 3 3 0 000-6z" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="brand-name">OneVictoria</div>
+                    <div class="brand-sub">Resident Hub</div>
+                </div>
+            </a>
+            <a class="back" href="index.html">
+                <svg viewBox="0 0 24 24">
+                    <path d="M15 18l-6-6 6-6" />
+                </svg>
+                <span>Back to Hub</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="wrap">
+        <div class="layout">
+            <aside class="toc" aria-label="On this page">
+                <h2>On this page</h2>
+                <nav class="toc-links">
+                    <a href="#acceptance"><span>01</span>Acceptance</a>
+                    <a href="#eligibility"><span>02</span>Eligibility</a>
+                    <a href="#account"><span>03</span>Accounts</a>
+                    <a href="#user-conduct"><span>04</span>Conduct</a>
+                    <a href="#privacy"><span>05</span>Privacy</a>
+                    <a href="#intellectual-property"><span>06</span>IP</a>
+                    <a href="#events"><span>07</span>Events</a>
+                    <a href="#volunteering"><span>08</span>Volunteers</a>
+                    <a href="#donations"><span>09</span>Donations</a>
+                    <a href="#termination"><span>10</span>Termination</a>
+                    <a href="#disclaimers"><span>11</span>Disclaimers</a>
+                    <a href="#limitation"><span>12</span>Liability</a>
+                    <a href="#changes"><span>13</span>Changes</a>
+                    <a href="#governing-law"><span>14</span>Governing law</a>
+                    <a href="#contact"><span>15</span>Contact</a>
+                </nav>
+            </aside>
+
+            <article class="doc" id="terms">
+                <div class="doc-hero">
+                    <div class="kicker">Legal · Municipality of Victoria</div>
+                    <h1>Terms of Service</h1>
+                    <p class="lede">The rules for using OneVictoria — accounts, events, volunteering, donations, and
+                        your obligations as a resident user.</p>
+                    <div class="meta">
+                        <span class="pill">Effective 22 July 2026</span>
+                        <span class="pill">Binding agreement</span>
+                        <span class="pill">Victoria, Tarlac</span>
+                    </div>
+                </div>
+
+                <div class="doc-body">
+                    <section class="block" id="acceptance">
+                        <h2><span class="num">1</span>Acceptance of terms</h2>
+                        <p>By accessing OneVictoria, operated by the <strong>Municipality of Victoria</strong>, you
+                            confirm that you have read, understood, and agree to these Terms.</p>
+                        <div class="callout gold">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z" />
+                            </svg>
+                            <div><strong>If you do not agree, do not use the Platform.</strong> These Terms are a
+                                legally binding agreement. Continued use after we post changes means you accept them.
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="block" id="eligibility">
+                        <h2><span class="num">2</span>Eligibility</h2>
+                        <p>You may use the Platform only if you meet all of the following:</p>
+                        <div class="cards">
+                            <div class="card">
+                                <h3>Age</h3>
+                                <p>At least <strong>15 years old</strong>. Users under 18 need parental or guardian
+                                    consent.</p>
+                            </div>
+                            <div class="card">
+                                <h3>Connection to Victoria</h3>
+                                <p>A resident of Victoria, Tarlac, or another legitimate municipal connection.</p>
+                            </div>
+                            <div class="card">
+                                <h3>Truthful information</h3>
+                                <p>Registration and profile details must be accurate, complete, and current.</p>
+                            </div>
+                            <div class="card">
+                                <h3>Good standing</h3>
+                                <p>You must not have been suspended or removed for a prior violation.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="block" id="account">
+                        <h2><span class="num">3</span>Account registration &amp; security</h2>
+                        <ul class="uses">
+                            <li><strong>3.1 Creation.</strong> Provide accurate information and keep it updated.</li>
+                            <li><strong>3.2 Credentials.</strong> You are responsible for your password and for all
+                                activity on the account.</li>
+                            <li><strong>3.3 One account.</strong> Only <strong>one account per person</strong>. Multiple
+                                accounts are prohibited.</li>
+                            <li><strong>3.4 Verification.</strong> The Municipality may verify your details at any time.
+                            </li>
+                        </ul>
+                        <div class="callout warn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 1a5 5 0 00-5 5v3H6a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2v-8a2 2 0 00-2-2h-1V6a5 5 0 00-5-5zm-3 8V6a3 3 0 016 0v3H9z" />
+                            </svg>
+                            <div><strong>Protect your login.</strong> Use a unique password. Never share it — including
+                                for cash donation confirmation.</div>
+                        </div>
+                    </section>
+
+                    <section class="block" id="user-conduct">
+                        <h2><span class="num">4</span>User conduct</h2>
+                        <p>Use the Platform lawfully. The following are expressly prohibited:</p>
+                        <ul class="ban">
+                            <li>False, misleading, or fraudulent information</li>
+                            <li>Impersonating any person or office</li>
+                            <li>Any illegal purpose</li>
+                            <li>Unlawful, defamatory, or obscene content</li>
+                            <li>Disrupting Platform operations</li>
+                            <li>Unauthorized access to systems</li>
+                            <li>Bots, scrapers, or automated scripts</li>
+                            <li>Viruses or other malicious code</li>
+                            <li>Harvesting personal data without authority</li>
+                            <li>Unsolicited messages or spam</li>
+                        </ul>
+                        <div class="callout danger">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
+                            </svg>
+                            <div><strong>Consequences.</strong> Violations may lead to immediate suspension or
+                                termination and, where warranted, referral to law enforcement.</div>
+                        </div>
+                    </section>
+
+                    <section class="block" id="privacy">
+                        <h2><span class="num">5</span>Privacy &amp; data</h2>
+                        <p>How we collect and use personal data is set out in the <a href="privacy-policy.html">Privacy
+                                Policy</a>, which is incorporated into these Terms.</p>
+                        <div class="callout info">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l8 4v6c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V6l8-4z" />
+                            </svg>
+                            <div>The Municipality complies with the <strong>Data Privacy Act of 2012 (RA
+                                    10173)</strong>. You keep ownership of your personal information and grant only the
+                                limited processing license described in the Privacy Policy.</div>
+                        </div>
+                    </section>
+
+                    <section class="block" id="intellectual-property">
+                        <h2><span class="num">6</span>Intellectual property</h2>
+                        <p>Content, marks, logos, and materials on the Platform belong to the <strong>Municipality of
+                                Victoria</strong> or its licensors and are protected by applicable IP laws.</p>
+                        <p>You may not copy, distribute, modify, display, or otherwise exploit that content without
+                            prior written permission.</p>
+                    </section>
+
+                    <section class="block" id="events">
+                        <h2><span class="num">7</span>Events &amp; registration</h2>
+                        <p>Event sign-up may include extra rules for that event. By registering you agree to those
+                            rules.</p>
+                        <p>The Municipality may modify, reschedule, or cancel events. Registered participants will be
+                            notified through the contact details on file.</p>
+                    </section>
+
+                    <section class="block" id="volunteering">
+                        <h2><span class="num">8</span>Volunteer terms</h2>
+                        <p>Volunteers follow municipal guidelines and instructions. Service is voluntary and unpaid.</p>
+                        <p>The Municipality may verify credentials and may accept or decline an application at its
+                            discretion.</p>
+                    </section>
+
+                    <section class="block" id="donations">
+                        <h2><span class="num">9</span>Donations &amp; payments</h2>
+                        <p>Money donations are processed through the methods offered on the Platform (e-wallet, bank
+                            transfer, or cash at the Municipal Hall). You confirm you are authorized to use the payment
+                            method you choose.</p>
+                        <ul class="uses">
+                            <li><strong>Proof.</strong> Digital payments require a valid screenshot. Cash donations
+                                require password confirmation and in-person payment at the hall.</li>
+                            <li><strong>Status.</strong> Submissions stay pending until municipal staff verify them.
+                            </li>
+                            <li><strong>Refunds.</strong> Donations are generally <strong>non-refundable</strong> unless
+                                the Municipality specifies otherwise or the law requires a refund.</li>
+                        </ul>
+                    </section>
+
+                    <section class="block" id="termination">
+                        <h2><span class="num">10</span>Termination</h2>
+                        <p>The Municipality may suspend or terminate access, with or without notice, for a breach of
+                            these Terms or conduct harmful to the Platform or the community.</p>
+                        <p>On termination your right to use the Platform ends immediately. IP, disclaimer, and liability
+                            clauses survive.</p>
+                    </section>
+
+                    <section class="block" id="disclaimers">
+                        <h2><span class="num">11</span>Disclaimers</h2>
+                        <p>The Platform is provided <strong>“as is” and “as available.”</strong> The Municipality does
+                            not warrant that it will be uninterrupted, error-free, secure, or free of harmful code.</p>
+                        <p>All implied warranties — including merchantability, fitness for a particular purpose, and
+                            non-infringement — are disclaimed to the extent the law allows.</p>
+                    </section>
+
+                    <section class="block" id="limitation">
+                        <h2><span class="num">12</span>Limitation of liability</h2>
+                        <p>To the fullest extent permitted by law, the Municipality of Victoria, its officers,
+                            employees, and affiliates are not liable for indirect, incidental, special, consequential,
+                            or punitive damages arising from use of the Platform.</p>
+                        <p>This applies whether the claim is in contract, tort, or any other theory, even if the
+                            Municipality was advised that such damages were possible.</p>
+                    </section>
+
+                    <section class="block" id="changes">
+                        <h2><span class="num">13</span>Changes to these Terms</h2>
+                        <p>We may update these Terms at any time. Material changes will be posted here and, where
+                            practical, sent through the in-app notification center or your registered email.</p>
+                        <p>Continued use after an update takes effect is acceptance of the revised Terms.</p>
+                    </section>
+
+                    <section class="block" id="governing-law">
+                        <h2><span class="num">14</span>Governing law</h2>
+                        <p>These Terms are governed by the laws of the <strong>Republic of the Philippines</strong> and
+                            the ordinances of the Municipality of Victoria, Tarlac.</p>
+                        <p>Disputes are subject to the exclusive jurisdiction of the proper courts in Victoria, Tarlac.
+                        </p>
+                    </section>
+
+                    <section class="block" id="contact">
+                        <h2><span class="num">15</span>Contact</h2>
+                        <p>Questions about these Terms:</p>
+                        <div class="contact">
+                            <strong class="who">Municipality of Victoria — OneVictoria Desk</strong>
+                            <div class="row">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z" />
+                                </svg>
+                                Municipal Hall, Victoria, Tarlac, Philippines 2313
+                            </div>
+                            <div class="row">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                </svg>
+                                info@victoria.gov.ph
+                            </div>
+                            <div class="row">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15v-2h2v2h-2zm0-4V7h2v6h-2z" />
+                                </svg>
+                                www.victoria.gov.ph
+                            </div>
+                            <div class="row">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 11H7V7h2v4h4v2z" />
+                                </svg>
+                                Monday–Friday, 8:00 AM–5:00 PM (PHT)
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </div>
+
+        <footer class="site">
+            <p>© 2026 Municipality of Victoria. All rights reserved.</p>
+            <nav class="links" aria-label="Legal">
+                <a href="privacy-policy.html">Privacy</a>
+                <span class="here">Terms</span>
+                <a href="help-center.html">Help</a>
+                <a href="feedback.html">Feedback</a>
+            </nav>
+        </footer>
+    </div>
+</body>
+
+</html>

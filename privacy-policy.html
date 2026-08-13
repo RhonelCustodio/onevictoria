@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Privacy Policy for OneVictoria Resident Hub — how the Municipality of Victoria, Tarlac collects, uses, and protects personal data under RA 10173." />
+  <title>Privacy Policy · OneVictoria</title>
+  <link rel="shortcut icon" href="gemini-svg%20(1).svg" type="image/x-icon" />
+  <style>
+    :root {
+      --blue: #003B71;
+      --blue-hover: #002A52;
+      --blue-soft: #E6EEF5;
+      --gold: #F2A900;
+      --gold-dark: #D49300;
+      --gold-soft: #FFF6E0;
+      --dark: #001F3F;
+      --light: #E8F0FE;
+      --accent: #005B9F;
+      --ink: #0B1C2C;
+      --body: #334155;
+      --muted: #64748B;
+      --border: #E2E8F0;
+      --canvas: #F5F7FA;
+      --surface: #FFFFFF;
+      --surface-2: #EEF3F8;
+      --success: #0D7A5F;
+      --success-bg: #E6F6F1;
+      --warning: #B45309;
+      --warning-bg: #FEF3C7;
+      --info: #026AA2;
+      --info-bg: #E0F2FE;
+      --header-h: 56px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, Segoe UI, Helvetica, Arial, sans-serif;
+      background: var(--canvas);
+      color: var(--body);
+      font-size: 14.5px;
+      line-height: 1.55;
+      min-height: 100vh;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--blue);
+      text-decoration: underline;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+    }
+
+    .skip {
+      position: absolute;
+      left: 12px;
+      top: -40px;
+      background: var(--gold);
+      color: var(--dark);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-weight: 700;
+      z-index: 80;
+    }
+
+    .skip:focus {
+      top: 12px;
+    }
+
+    header.app {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      height: var(--header-h);
+      background: var(--dark);
+      color: #fff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .app-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      height: 100%;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      text-decoration: none;
+      min-width: 0;
+    }
+
+    .brand:hover {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .seal {
+      width: 30px;
+      height: 30px;
+      border-radius: 9px;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      display: grid;
+      place-items: center;
+    }
+
+    .seal svg {
+      width: 15px;
+      height: 15px;
+      fill: var(--dark);
+    }
+
+    .brand-name {
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-sub {
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.55);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 7px 12px;
+      border-radius: 9px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .back:hover {
+      background: rgba(255, 255, 255, 0.14);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .back svg {
+      width: 12px;
+      height: 12px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+    }
+
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 20px 16px 40px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 20px;
+      align-items: start;
+    }
+
+    aside.toc {
+      position: sticky;
+      top: calc(var(--header-h) + 16px);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 12px;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+    }
+
+    .toc h2 {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 800;
+      padding: 0 6px 8px;
+    }
+
+    .toc a {
+      display: block;
+      color: var(--body);
+      text-decoration: none;
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 6px 8px;
+      border-radius: 8px;
+    }
+
+    .toc a:hover {
+      background: var(--blue-soft);
+      color: var(--blue);
+    }
+
+    .toc a span {
+      color: var(--gold-dark);
+      font-variant-numeric: tabular-nums;
+      margin-right: 6px;
+    }
+
+    article.doc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+      overflow: hidden;
+    }
+
+    .doc-hero {
+      background: var(--blue);
+      color: #fff;
+      padding: 22px 22px 18px;
+      position: relative;
+    }
+
+    .doc-hero::after {
+      content: "";
+      position: absolute;
+      right: -30px;
+      top: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(242, 169, 0, 0.28), transparent 70%);
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    .doc-hero h1 {
+      font-size: 26px;
+      letter-spacing: -0.035em;
+      line-height: 1.15;
+    }
+
+    .lede {
+      margin-top: 6px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 13.5px;
+      max-width: 58ch;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 14px;
+    }
+
+    .pill {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 9px;
+      border-radius: 999px;
+    }
+
+    .doc-body {
+      padding: 8px 22px 22px;
+    }
+
+    section.block {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: calc(var(--header-h) + 12px);
+    }
+
+    section.block:last-of-type {
+      border-bottom: 0;
+    }
+
+    .block h2 {
+      color: var(--blue);
+      font-size: 15.5px;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .num {
+      color: var(--gold-dark);
+      font-variant-numeric: tabular-nums;
+      font-size: 13px;
+      min-width: 1.4em;
+    }
+
+    .block p {
+      margin: 0 0 8px;
+    }
+
+    .block p:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .callout {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      border-radius: 10px;
+      padding: 10px 12px;
+      margin: 10px 0 4px;
+      font-size: 13px;
+    }
+
+    .callout.gold {
+      background: var(--gold-soft);
+      color: #7A4E00;
+      border: 1px solid #F3D98A;
+    }
+
+    .callout.ok {
+      background: var(--success-bg);
+      color: #065F46;
+      border: 1px solid #B7E4D4;
+    }
+
+    .callout.warn {
+      background: var(--warning-bg);
+      color: #92400E;
+      border: 1px solid #F5D38A;
+    }
+
+    .callout.info {
+      background: var(--info-bg);
+      color: #075985;
+      border: 1px solid #BAE6FD;
+    }
+
+    .callout svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .card {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+
+    .card h3 {
+      color: var(--blue);
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 3px;
+    }
+
+    .card p {
+      font-size: 12.5px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 5px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .icon svg {
+      width: 10px;
+      height: 10px;
+      fill: currentColor;
+    }
+
+    .uses {
+      list-style: none;
+      display: grid;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .uses li {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 8px 10px 8px 12px;
+      border-left: 3px solid var(--gold);
+      font-size: 13.5px;
+    }
+
+    .rights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .right {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 9px 10px;
+    }
+
+    .right h3 {
+      font-size: 13px;
+      color: var(--blue);
+    }
+
+    .right p {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 1px 0 0;
+    }
+
+    .sec3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin: 8px 0;
+    }
+
+    .stat {
+      text-align: center;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 8px;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--blue);
+      font-size: 12.5px;
+      margin-top: 4px;
+    }
+
+    .stat span {
+      display: block;
+      color: var(--muted);
+      font-size: 11.5px;
+    }
+
+    .contact {
+      background: linear-gradient(180deg, var(--blue-soft), #fff);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 16px;
+    }
+
+    .contact .who {
+      grid-column: 1 / -1;
+      color: var(--blue);
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+
+    .row {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      font-size: 13px;
+    }
+
+    .row svg {
+      width: 13px;
+      height: 13px;
+      fill: var(--accent);
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    footer.site {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-weight: 600;
+    }
+
+    .links .here {
+      color: var(--blue);
+    }
+
+    @media (max-width: 860px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      aside.toc {
+        position: static;
+        padding: 12px;
+      }
+
+      .toc-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+
+      .toc a {
+        padding: 5px 8px;
+        background: var(--surface-2);
+        font-size: 12px;
+      }
+
+      .cards,
+      .rights,
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      .sec3 {
+        grid-template-columns: 1fr;
+      }
+
+      .doc-hero {
+        padding: 18px 16px 16px;
+      }
+
+      .doc-hero h1 {
+        font-size: 22px;
+      }
+
+      .doc-body {
+        padding: 4px 16px 18px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .brand-sub {
+        display: none;
+      }
+
+      .back span {
+        display: none;
+      }
+    }
+
+    @media print {
+
+      header.app,
+      aside.toc,
+      footer.site,
+      .skip {
+        display: none !important;
+      }
+
+      body,
+      .doc {
+        background: #fff;
+        box-shadow: none;
+        border: 0;
+      }
+
+      .wrap,
+      .layout {
+        display: block;
+        padding: 0;
+        max-width: none;
+      }
+
+      .doc-hero {
+        background: #fff;
+        color: var(--blue);
+        padding: 0 0 12px;
+      }
+
+      .doc-hero .lede,
+      .pill {
+        color: var(--body);
+      }
+
+      .kicker {
+        color: var(--gold-dark);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#policy">Skip to policy</a>
+
+  <header class="app">
+    <div class="app-inner">
+      <a class="brand" href="index.html">
+        <div class="seal" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 10l8-6 8 6v10H4V10zm8 1a3 3 0 100 6 3 3 0 000-6z" />
+          </svg>
+        </div>
+        <div>
+          <div class="brand-name">OneVictoria</div>
+          <div class="brand-sub">Resident Hub</div>
+        </div>
+      </a>
+      <a class="back" href="./index.html">
+        <svg viewBox="0 0 24 24">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+        <span>Back to Hub</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="layout">
+      <aside class="toc" aria-label="On this page">
+        <h2>On this page</h2>
+        <nav class="toc-links">
+          <a href="#s1"><span>01</span>Introduction</a>
+          <a href="#s2"><span>02</span>Data we collect</a>
+          <a href="#s3"><span>03</span>How we use it</a>
+          <a href="#s4"><span>04</span>Sharing</a>
+          <a href="#s5"><span>05</span>Security</a>
+          <a href="#s6"><span>06</span>Retention</a>
+          <a href="#s7"><span>07</span>Your rights</a>
+          <a href="#s8"><span>08</span>Cookies</a>
+          <a href="#s9"><span>09</span>Contact</a>
+          <a href="#s10"><span>10</span>Updates</a>
+        </nav>
+      </aside>
+
+      <article class="doc" id="policy">
+        <div class="doc-hero">
+          <div class="kicker">Legal · Municipality of Victoria</div>
+          <h1>Privacy Policy</h1>
+          <p class="lede">How OneVictoria collects, uses, and protects resident data under the Data Privacy Act of 2012.
+          </p>
+          <div class="meta">
+            <span class="pill">Effective 1 January 2026</span>
+            <span class="pill">Updated 22 July 2026</span>
+            <span class="pill">RA 10173</span>
+          </div>
+        </div>
+
+        <div class="doc-body">
+          <section class="block" id="s1">
+            <h2><span class="num">1</span>Introduction &amp; scope</h2>
+            <p><strong>OneVictoria</strong> is the official digital Resident Hub of the <strong>Municipality of
+                Victoria, Tarlac</strong>. This policy covers account registration, events, volunteer applications,
+              donations, and related notices.</p>
+            <div class="callout gold">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l8 4v6c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V6l8-4z" />
+              </svg>
+              <div><strong>Legal basis.</strong> Processing is carried out under the <strong>Data Privacy Act of 2012
+                  (Republic Act No. 10173)</strong>, its IRR, and applicable ordinances of Victoria, Tarlac.</div>
+            </div>
+            <p>By using OneVictoria you confirm that you have read and understood this policy.</p>
+          </section>
+
+          <section class="block" id="s2">
+            <h2><span class="num">2</span>Information we collect</h2>
+            <p>We collect only what is needed to deliver municipal services.</p>
+            <div class="cards">
+              <div class="card">
+                <h3><span class="icon"><svg viewBox="0 0 24 24">
+                      <path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-4.4 0-8 2-8 4.5V20h16v-1.5c0-2.5-3.6-4.5-8-4.5z" />
+                    </svg></span>Identification</h3>
+                <p>Name, email, mobile number, age, gender, and residential address.</p>
+              </div>
+              <div class="card">
+                <h3><span class="icon"><svg viewBox="0 0 24 24">
+                      <path d="M12 21s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.6-7 10-7 10z" />
+                    </svg></span>Service data</h3>
+                <p>Volunteer skills, availability, supporting files, service hours, and event registrations.</p>
+              </div>
+              <div class="card">
+                <h3><span class="icon"><svg viewBox="0 0 24 24">
+                      <path
+                        d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm1 15h-2v-2h2v2zm1.1-5.5l-.9.9c-.7.7-1.2 1.3-1.2 2.6h-2v-.5c0-1 .4-1.8 1.2-2.6l1.2-1.3c.4-.4.6-.9.6-1.4 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.2 1.8-4 4-4s4 1.8 4 4c0 .9-.4 1.7-1.9 2.3z" />
+                    </svg></span>Donations</h3>
+                <p>Amount, purpose, payment method reference, and donor identification.</p>
+              </div>
+              <div class="card">
+                <h3><span class="icon"><svg viewBox="0 0 24 24">
+                      <path d="M4 5h16v4H4V5zm0 6h10v8H4v-8zm12 0h4v8h-4v-8z" />
+                    </svg></span>Technical logs</h3>
+                <p>IP address, browser, device type, and platform interaction logs.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="block" id="s3">
+            <h2><span class="num">3</span>How we use your information</h2>
+            <p>Data is processed only for legitimate municipal purposes:</p>
+            <ul class="uses">
+              <li><strong>Account management</strong> — create and secure your resident account and verify identity.
+              </li>
+              <li><strong>Community services</strong> — process events, volunteer applications, and service hours.</li>
+              <li><strong>Donation processing</strong> — record gifts, issue references, and keep transparent logs.
+                Names appear publicly only with consent.</li>
+              <li><strong>Notices</strong> — send critical updates, announcements, and policy changes.</li>
+              <li><strong>Platform improvement</strong> — debug issues, review aggregated trends, and strengthen
+                security.</li>
+              <li><strong>Legal compliance</strong> — meet statutory duties and lawful government requests.</li>
+            </ul>
+          </section>
+
+          <section class="block" id="s4">
+            <h2><span class="num">4</span>Sharing &amp; disclosure</h2>
+            <div class="callout ok">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z" />
+              </svg>
+              <div><strong>We do not sell, rent, or trade personal information</strong> for commercial purposes.</div>
+            </div>
+            <ul class="uses">
+              <li><strong>Municipal departments</strong> — authorized LGU staff who need the data to deliver the
+                service.</li>
+              <li><strong>Service providers</strong> — vendors bound by contract to protect your information.</li>
+              <li><strong>Legal process</strong> — when required by law or to protect rights and public safety.</li>
+              <li><strong>Public acknowledgment</strong> — donor names are published only with <strong>explicit
+                  consent</strong>; otherwise donations stay anonymous.</li>
+            </ul>
+          </section>
+
+          <section class="block" id="s5">
+            <h2><span class="num">5</span>Security measures</h2>
+            <p>We apply administrative, technical, and physical safeguards:</p>
+            <div class="sec3">
+              <div class="stat">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#003B71">
+                  <path
+                    d="M12 1L3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
+                </svg>
+                <strong>Encryption</strong>
+                <span>SSL/TLS in transit</span>
+              </div>
+              <div class="stat">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#003B71">
+                  <path d="M4 6h16v4H4V6zm0 6h16v8H4v-8z" />
+                </svg>
+                <strong>Access control</strong>
+                <span>Role-limited servers</span>
+              </div>
+              <div class="stat">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#003B71">
+                  <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" />
+                </svg>
+                <strong>Monitoring</strong>
+                <span>Audits and updates</span>
+              </div>
+            </div>
+            <div class="callout warn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z" />
+              </svg>
+              <div><strong>No system is 100% secure.</strong> We keep improving controls to match current industry
+                practice. Protect your password and never share it.</div>
+            </div>
+          </section>
+
+          <section class="block" id="s6">
+            <h2><span class="num">6</span>Retention</h2>
+            <p>We keep personal data only as long as needed for the purposes in this policy, or as Philippine law
+              requires.</p>
+            <ul class="uses">
+              <li><strong>Active accounts</strong> — retained while the profile remains active.</li>
+              <li><strong>Deactivation</strong> — upon a valid request we securely dispose of data within 30–60 days,
+                subject to legal holds.</li>
+              <li><strong>Legal archives</strong> — some records may be kept for audit, finance, or statutory retention.
+              </li>
+            </ul>
+          </section>
+
+          <section class="block" id="s7">
+            <h2><span class="num">7</span>Your rights</h2>
+            <p>Under RA 10173 you may exercise the following. Contact the DPO in Section 9.</p>
+            <div class="rights">
+              <div class="right">
+                <span class="icon"><svg viewBox="0 0 24 24">
+                    <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                  </svg></span>
+                <div>
+                  <h3>Informed</h3>
+                  <p>Know how your data is processed.</p>
+                </div>
+              </div>
+              <div class="right">
+                <span class="icon"><svg viewBox="0 0 24 24">
+                    <path
+                      d="M12 5C7 5 2.7 8.1 1 12c1.7 3.9 6 7 11 7s9.3-3.1 11-7c-1.7-3.9-6-7-11-7zm0 12a5 5 0 110-10 5 5 0 010 10z" />
+                  </svg></span>
+                <div>
+                  <h3>Access</h3>
+                  <p>Request a copy of data we hold.</p>
+                </div>
+              </div>
+              <div class="right">
+                <span class="icon"><svg viewBox="0 0 24 24">
+                    <path
+                      d="M3 17.2V21h3.8L17.8 9.9l-3.8-3.8L3 17.2zM20.7 7c.4-.4.4-1 0-1.4l-2.3-2.3a1 1 0 00-1.4 0l-1.8 1.8 3.8 3.8L20.7 7z" />
+                  </svg></span>
+                <div>
+                  <h3>Rectification</h3>
+                  <p>Correct inaccurate or incomplete records.</p>
+                </div>
+              </div>
+              <div class="right">
+                <span class="icon"><svg viewBox="0 0 24 24">
+                    <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm5 11H7v-2h10v2z" />
+                  </svg></span>
+                <div>
+                  <h3>Object</h3>
+                  <p>Withdraw consent for specific uses.</p>
+                </div>
+              </div>
+              <div class="right">
+                <span class="icon"><svg viewBox="0 0 24 24">
+                    <path d="M6 7h12l-1 14H7L6 7zm3-3h6l1 2H8l1-2z" />
+                  </svg></span>
+                <div>
+                  <h3>Erasure / blocking</h3>
+                  <p>Request deletion where the law allows.</p>
+                </div>
+              </div>
+              <div class="right">
+                <span class="icon"><svg viewBox="0 0 24 24">
+                    <path d="M14 2H6a2 2 0 00-2 2v16l4-2 4 2 4-2 4 2V8l-6-6zm0 2.5L17.5 8H14V4.5z" />
+                  </svg></span>
+                <div>
+                  <h3>Complaint</h3>
+                  <p>File with the National Privacy Commission.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="block" id="s8">
+            <h2><span class="num">8</span>Cookies &amp; tracking</h2>
+            <p>We use <strong>essential cookies</strong> only — to keep you signed in, remember preferences, and protect
+              the session.</p>
+            <div class="callout info">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+              </svg>
+              <div>
+                <strong>We do not</strong> use advertising cookies, track you across other sites, or sell browsing data.
+                Disabling essential cookies may stop login and payment confirmation from working.
+              </div>
+            </div>
+          </section>
+
+          <section class="block" id="s9">
+            <h2><span class="num">9</span>Contact</h2>
+            <p>Questions or rights requests go to the Data Protection Officer:</p>
+            <div class="contact">
+              <strong class="who">Municipality of Victoria — Data Protection Officer</strong>
+              <div class="row">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z" />
+                </svg>
+                Municipal Hall, Victoria, Tarlac, Philippines 2313
+              </div>
+              <div class="row">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
+                dpo@victoria.gov.ph
+              </div>
+              <div class="row">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .7-.3 1L6.6 10.8z" />
+                </svg>
+                (045) 123-4567 local 102
+              </div>
+              <div class="row">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 11H7V7h2v4h4v2z" />
+                </svg>
+                Monday–Friday, 8:00 AM–5:00 PM (PHT)
+              </div>
+            </div>
+          </section>
+
+          <section class="block" id="s10">
+            <h2><span class="num">10</span>Changes to this policy</h2>
+            <p>We may revise this policy when our practices, systems, or the law change. When we do, we will:</p>
+            <ul class="uses">
+              <li>Notify registered residents in the OneVictoria notification center</li>
+              <li>Post the new version with an updated effective date</li>
+              <li>Summarize material changes where appropriate</li>
+            </ul>
+            <p>Continued use after an update takes effect means you accept the revised policy.</p>
+          </section>
+        </div>
+      </article>
+    </div>
+
+    <footer class="site">
+      <p>© 2026 Municipality of Victoria. All rights reserved.</p>
+      <nav class="links" aria-label="Legal">
+        <span class="here">Privacy</span>
+        <a href="terms-of-service.html">Terms</a>
+        <a href="help-center.html">Help</a>
+        <a href="feedback.html">Feedback</a>
+      </nav>
+    </footer>
+  </div>
+</body>
+
+</html>

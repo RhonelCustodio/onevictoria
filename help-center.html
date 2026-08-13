@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Help Center for OneVictoria Resident Hub — accounts, events, volunteering, donations, and support." />
+    <title>Help Center · OneVictoria</title>
+    <link rel="shortcut icon" href="gemini-svg%20(1).svg" type="image/x-icon" />
+    <style>
+        :root {
+            --blue: #003B71;
+            --blue-hover: #002A52;
+            --blue-soft: #E6EEF5;
+            --gold: #F2A900;
+            --gold-dark: #D49300;
+            --gold-soft: #FFF6E0;
+            --dark: #001F3F;
+            --light: #E8F0FE;
+            --accent: #005B9F;
+            --ink: #0B1C2C;
+            --body: #334155;
+            --muted: #64748B;
+            --border: #E2E8F0;
+            --canvas: #F5F7FA;
+            --surface: #FFFFFF;
+            --surface-2: #EEF3F8;
+            --success: #0D7A5F;
+            --success-bg: #E6F6F1;
+            --warning: #B45309;
+            --warning-bg: #FEF3C7;
+            --danger: #B42318;
+            --danger-bg: #FEE4E2;
+            --info: #026AA2;
+            --info-bg: #E0F2FE;
+            --header-h: 56px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Inter, Segoe UI, Helvetica, Arial, sans-serif;
+            background: var(--canvas);
+            color: var(--body);
+            font-size: 14.5px;
+            line-height: 1.55;
+            min-height: 100vh;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--blue);
+            text-decoration: underline;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid var(--gold);
+            outline-offset: 2px;
+        }
+
+        .skip {
+            position: absolute;
+            left: 12px;
+            top: -40px;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-weight: 700;
+            z-index: 80;
+        }
+
+        .skip:focus {
+            top: 12px;
+        }
+
+        header.app {
+            position: sticky;
+            top: 0;
+            z-index: 40;
+            height: var(--header-h);
+            background: var(--dark);
+            color: #fff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .app-inner {
+            max-width: 1080px;
+            margin: 0 auto;
+            height: 100%;
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            text-decoration: none;
+            min-width: 0;
+        }
+
+        .brand:hover {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .seal {
+            width: 30px;
+            height: 30px;
+            border-radius: 9px;
+            flex-shrink: 0;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            display: grid;
+            place-items: center;
+        }
+
+        .seal svg {
+            width: 15px;
+            height: 15px;
+            fill: var(--dark);
+        }
+
+        .brand-name {
+            font-weight: 800;
+            font-size: 14px;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-sub {
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.55);
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 7px 12px;
+            border-radius: 9px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .back:hover {
+            background: rgba(255, 255, 255, 0.14);
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .back svg {
+            width: 12px;
+            height: 12px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .wrap {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 20px 16px 40px;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 200px minmax(0, 1fr);
+            gap: 20px;
+            align-items: start;
+        }
+
+        aside.toc {
+            position: sticky;
+            top: calc(var(--header-h) + 16px);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 14px 12px;
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+        }
+
+        .toc h2 {
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            font-weight: 800;
+            padding: 0 6px 8px;
+        }
+
+        .toc a {
+            display: block;
+            color: var(--body);
+            text-decoration: none;
+            font-size: 12.5px;
+            font-weight: 600;
+            padding: 6px 8px;
+            border-radius: 8px;
+        }
+
+        .toc a:hover,
+        .toc a.active {
+            background: var(--blue-soft);
+            color: var(--blue);
+        }
+
+        article.doc {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+            overflow: hidden;
+        }
+
+        .doc-hero {
+            background: var(--blue);
+            color: #fff;
+            padding: 22px 22px 18px;
+            position: relative;
+        }
+
+        .doc-hero::after {
+            content: "";
+            position: absolute;
+            right: -30px;
+            top: -40px;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(242, 169, 0, 0.28), transparent 70%);
+        }
+
+        .kicker {
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 6px;
+        }
+
+        .doc-hero h1 {
+            font-size: 26px;
+            letter-spacing: -0.035em;
+            line-height: 1.15;
+        }
+
+        .lede {
+            margin-top: 6px;
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 13.5px;
+            max-width: 58ch;
+        }
+
+        .search {
+            position: relative;
+            margin-top: 14px;
+            max-width: 420px;
+            z-index: 2;
+        }
+
+        .search input {
+            width: 100%;
+            border: 0;
+            border-radius: 10px;
+            padding: 10px 12px 10px 36px;
+            font: inherit;
+            color: var(--ink);
+            background: #fff;
+        }
+
+        .search svg {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 14px;
+            height: 14px;
+            fill: var(--muted);
+        }
+
+        .search-hint {
+            margin-top: 6px;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        #searchHits {
+            display: none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: calc(100% + 6px);
+            background: #fff;
+            color: var(--ink);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+            max-height: 260px;
+            overflow: auto;
+            z-index: 5;
+        }
+
+        #searchHits a {
+            display: block;
+            padding: 8px 12px;
+            color: var(--ink);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        #searchHits a:last-child {
+            border-bottom: 0;
+        }
+
+        #searchHits a:hover {
+            background: var(--blue-soft);
+            color: var(--blue);
+        }
+
+        #searchHits .empty {
+            padding: 14px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        mark {
+            background: var(--gold-soft);
+            color: var(--ink);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        .doc-body {
+            padding: 8px 22px 22px;
+        }
+
+        section.block {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+            scroll-margin-top: calc(var(--header-h) + 12px);
+        }
+
+        section.block:last-of-type {
+            border-bottom: 0;
+        }
+
+        .block h2 {
+            color: var(--blue);
+            font-size: 15.5px;
+            letter-spacing: -0.02em;
+            margin-bottom: 10px;
+        }
+
+        .block p {
+            margin: 0 0 8px;
+        }
+
+        strong {
+            color: var(--ink);
+            font-weight: 700;
+        }
+
+        .faq {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 6px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .faq[hidden] {
+            display: none;
+        }
+
+        .faq-q {
+            width: 100%;
+            text-align: left;
+            background: #fff;
+            border: 0;
+            padding: 11px 12px;
+            font: inherit;
+            font-weight: 700;
+            color: var(--ink);
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-q:hover {
+            background: var(--surface-2);
+        }
+
+        .chev {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background: var(--blue-soft);
+            color: var(--blue);
+            display: grid;
+            place-items: center;
+            transition: transform .2s ease;
+        }
+
+        .chev svg {
+            width: 10px;
+            height: 10px;
+            fill: currentColor;
+        }
+
+        .faq.open .chev {
+            transform: rotate(180deg);
+            background: var(--gold);
+            color: var(--dark);
+        }
+
+        .faq-a {
+            display: none;
+            padding: 0 12px 12px;
+            color: var(--body);
+            font-size: 13.5px;
+        }
+
+        .faq.open .faq-a {
+            display: block;
+        }
+
+        .faq-a ol,
+        .faq-a ul {
+            margin: 6px 0 8px 18px;
+        }
+
+        .faq-a li {
+            margin: 3px 0;
+        }
+
+        .callout {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+            border-radius: 8px;
+            padding: 8px 10px;
+            margin-top: 8px;
+            font-size: 13px;
+        }
+
+        .callout.gold {
+            background: var(--gold-soft);
+            color: #7A4E00;
+            border: 1px solid #F3D98A;
+        }
+
+        .callout.info {
+            background: var(--info-bg);
+            color: #075985;
+            border: 1px solid #BAE6FD;
+        }
+
+        .callout.warn {
+            background: var(--warning-bg);
+            color: #92400E;
+            border: 1px solid #F5D38A;
+        }
+
+        .callout.danger {
+            background: var(--danger-bg);
+            color: #7F1D1D;
+            border: 1px solid #FECDCA;
+        }
+
+        .pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            padding: 3px 9px;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .ok {
+            background: var(--success-bg);
+            color: var(--success);
+        }
+
+        .pend {
+            background: var(--warning-bg);
+            color: var(--warning);
+        }
+
+        .bad {
+            background: var(--danger-bg);
+            color: var(--danger);
+        }
+
+        .inf {
+            background: var(--info-bg);
+            color: var(--info);
+        }
+
+        .contact {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .c-card {
+            background: var(--surface-2);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 12px;
+            text-align: center;
+        }
+
+        .c-card h3 {
+            color: var(--blue);
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+
+        .c-card p {
+            font-size: 12px;
+            color: var(--muted);
+            margin: 0;
+        }
+
+        .cta {
+            margin-top: 12px;
+            background: var(--dark);
+            color: #fff;
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cta p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 13px;
+        }
+
+        .cta strong {
+            color: #fff;
+            display: block;
+            font-size: 15px;
+            margin-bottom: 2px;
+        }
+
+        .cta a {
+            background: var(--gold);
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 13px;
+            padding: 9px 14px;
+            border-radius: 9px;
+        }
+
+        .cta a:hover {
+            background: var(--gold-dark);
+            color: var(--dark);
+        }
+
+        #noResults {
+            display: none;
+            text-align: center;
+            padding: 28px 10px;
+            color: var(--muted);
+        }
+
+        footer.site {
+            margin-top: 18px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-weight: 600;
+        }
+
+        .links .here {
+            color: var(--blue);
+        }
+
+        @media (max-width: 860px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            aside.toc {
+                position: static;
+            }
+
+            .toc-links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4px;
+            }
+
+            .toc a {
+                padding: 5px 8px;
+                background: var(--surface-2);
+                font-size: 12px;
+            }
+
+            .contact {
+                grid-template-columns: 1fr;
+            }
+
+            .doc-hero {
+                padding: 18px 16px 16px;
+            }
+
+            .doc-hero h1 {
+                font-size: 22px;
+            }
+
+            .doc-body {
+                padding: 4px 16px 18px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .brand-sub {
+                display: none;
+            }
+
+            .back span {
+                display: none;
+            }
+        }
+
+        @media print {
+
+            header.app,
+            aside.toc,
+            footer.site,
+            .skip,
+            .search,
+            .cta {
+                display: none !important;
+            }
+
+            .faq-a {
+                display: block !important;
+            }
+
+            body,
+            .doc {
+                background: #fff;
+                box-shadow: none;
+                border: 0;
+            }
+
+            .wrap,
+            .layout {
+                display: block;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip" href="#help">Skip to help</a>
+
+    <header class="app">
+        <div class="app-inner">
+            <a class="brand" href="index.html">
+                <div class="seal" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M4 10l8-6 8 6v10H4V10zm8 1a3 3 0 100 6 3 3 0 000-6z" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="brand-name">OneVictoria</div>
+                    <div class="brand-sub">Resident Hub</div>
+                </div>
+            </a>
+            <a class="back" href="/index.html">
+                <svg viewBox="0 0 24 24">
+                    <path d="M15 18l-6-6 6-6" />
+                </svg>
+                <span>Back to Hub</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="wrap">
+        <div class="layout">
+            <aside class="toc" aria-label="Topics">
+                <h2>Topics</h2>
+                <nav class="toc-links">
+                    <a href="#getting-started">Getting started</a>
+                    <a href="#account-management">Account</a>
+                    <a href="#events-registration">Events</a>
+                    <a href="#volunteering">Volunteering</a>
+                    <a href="#service-hours">Service hours</a>
+                    <a href="#donations">Donations</a>
+                    <a href="#notifications">Notifications</a>
+                    <a href="#troubleshooting">Troubleshooting</a>
+                    <a href="#contact-support">Contact</a>
+                </nav>
+            </aside>
+
+            <article class="doc" id="help">
+                <div class="doc-hero">
+                    <div class="kicker">Support · Municipality of Victoria</div>
+                    <h1>Help Center</h1>
+                    <p class="lede">Short answers for accounts, events, volunteering, donations, and common issues.</p>
+                    <div class="search">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M15.5 14h-.8l-.3-.3A6.5 6.5 0 1014 15.5l.3.3v.8l5 5 1.5-1.5-5-5zm-6 0A4.5 4.5 0 119.5 5a4.5 4.5 0 010 9z" />
+                        </svg>
+                        <input id="helpSearch" type="search" placeholder="Search help (password, GCash, volunteer…)"
+                            autocomplete="off" />
+                        <div id="searchHits" role="listbox"></div>
+                    </div>
+                    <p class="search-hint">Press / to search</p>
+                </div>
+
+                <div class="doc-body">
+                    <p id="noResults">No articles match that search. Try “password”, “donate”, or “event”.</p>
+
+                    <section class="block" id="getting-started">
+                        <h2>Getting started</h2>
+
+                        <div class="faq" data-keys="onevictoria about platform portal what">
+                            <button class="faq-q" type="button">What is OneVictoria?<span class="chev"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M7 10l5 5 5-5z" />
+                                    </svg></span></button>
+                            <div class="faq-a">
+                                <p>OneVictoria is the official resident hub of the Municipality of Victoria, Tarlac.
+                                    After you sign in you can:</p>
+                                <ul>
+                                    <li>Read announcements and register for events</li>
+                                    <li>Apply as a volunteer and track service hours</li>
+                                    <li>Donate money or items</li>
+                                    <li>Receive notifications about approvals and updates</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq" data-keys="create account register sign up email verify">
+                            <button class="faq-q" type="button">How do I create an account?<span class="chev"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M7 10l5 5 5-5z" />
+                                    </svg></span></button>
+                            <div class="faq-a">
+                                <ol>
+                                    <li>On the homepage, choose <strong>Create Account</strong>.</li>
+                                    <li>Enter name, email, phone (09XXXXXXXXX), age (15+), gender, address, and a
+                                        password of at least 6 characters.</li>
+                                    <li>Submit, then open the verification email before you sign in.</li>
+                                </ol>
+                                <div class="callout gold">Use an email you can access. Unverified accounts cannot log
+                                    in.</div>
+                            </div>
+                        </div>
+
+                        <div class="faq" data-keys="sign in login access portal">
+                            <button class="faq-q" type="button">How do I sign in?<span class="chev"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M7 10l5 5 5-5z" />
+                                    </svg></span></button>
+                            <div class="faq-a">
+                                <ol>
+                                    <li>Enter your registered email and password.</li>
+                                    <li>Select <strong>Login</strong>.</li>
+                                </ol>
+                                <div class="callout danger">If the email is not verified, you will be signed out until
+                                    you click the link in your inbox.</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="block" id="account-management">
+                        <h2>Account</h2>
+
+                        <div class="faq" data-keys="update profile edit settings mobile address photo">
+                            <button class="faq-q" type="button">How do I update my profile?<span class="chev"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M7 10l5 5 5-5z" />
+                                    </svg></span></button>
+                            <div class="faq-a">
+                                <ol>
+                                    <li>Open <strong>Profile Settings</strong> from your name or photo.</li>
+                                    <li>Choose <strong>Edit Profile</strong>.</li>
+                                    <li>Change mobile number, address, or photo, then <strong>Save Changes</strong>.
+                                    </li>
+                                </ol>
+                                <div class="callout info">Name, email, gender, and age are locked. Ask support if those
+                                    must change.</div>
+                            </div>
+                        </div>
+
+                        <div class="faq" data-keys="change password new password">
+                            <button class="faq-q" type="button">How do I change my password?<span class="chev"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M7 10l5 5 5-5z" />
+                                    </svg></span></button>
+                            <div class="faq-a">
+                                <ol>
+                                    <li>Profile Settings → <strong>Edit Profile</strong>.</li>
+                                    <li>Type a new password (6+ characters) and save.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="block" id="events-registration">
+                        <h2>Events</h2>
+
+                        <div class="faq" data-keys="register event join community">
+                            <button class="faq-q" type="button">How do I register for an event?<span class="chev"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M7 10l5 5 5-5z" />
+                                    </svg></span></button>
+                            <div class="faq-a">
+                                <ol>
+                                    <li>News &amp; Events → <strong>Events</strong>.</li>
+                                    <li>Open <strong>Register / Join</strong> on a card and confirm.</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="faq" data-keys="cancel unregister my events">
+                            <button class="faq-q" type="button">Can I cancel a registration?<span class="chev"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M7 10l5 5 5-5z" />
+                                    </svg></span></button>
+                            <div class="faq-a">
+                                <ol>
+                                    <li>Open <strong>My Events</strong>.</li>
+                                    <li>Choose <strong>Cancel Registration</strong> and confirm.</li>
+                                </ol>
+                                <div class="callout gold">Cancel at least 24 hours before the event when you can.</div>
+                            </div>
+                        </div>
+
+                        <div class="faq" data-keys="status registered completed cancelled">
+                            <button class="faq-q" type="button">What do event statuses mean?<span class="chev"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M7 10l5 5 5-5z" />
+                                    </svg></span></button>
+                            <div class="faq-a">
+                                <div class="pills">
+                                    <span class="pill ok">Registered</span>
+                                    <span class="pill inf">Completed</span>
+                                    <span class="pill bad">Cancelled</span>
+                                </div>
+                                <p style="margin-top:8px"><strong>Registered</strong> — you are on the list.
+                                    <strong>Completed</strong> — attendance was recorded. <strong>Cancelled</strong> —
+                                    you or the organizer removed the booking.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="block" id="volunteering">
+                        <h2>Volunteering</h2>
+
+                        <div class="faq" data-keys="volunteer apply application skill">
+                            <button class="faq-q" type="button">How do I apply as a volunteer?<span class="chev"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M7 10l5 5 5-5z" />
+                                    </svg></span></button>
+                            <div class="faq-a">
+                                <ol>
+                                    <li>Community → <strong>Volunteer</strong>.</li>
+                                    <li>Choose skill, experience, and availability.</li>
+                                    <li>Upload proof of skill, then <strong>Submit Application</strong>.</li>
+                                </ol>
+                                <div class="callout info">Staff review applications. You will get a notification when
+                                    the status changes.</div>
+                            </div>
+                        </div>
+
+                        <div class="faq" data-keys="documents certificate pdf jpg png doc verification">
+                            <button class="faq-q" type="button">What files are accepted for skill proof?<span
+                                    class="chev"><svg viewBox="0 0 24 24">
+                                        <path d="M7 10l5 5 5-5z" />
+                                    </svg></span></button>
+                            <div class="faq-a">
+                                <p>Maximum 5MB. Accepted: <strong>PDF</strong>, <strong>JPG/PNG</strong>,
+                                    <strong>DOC/DOCX</strong> — certificates, licenses, or reference letters.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="block" id="service-hours">
+                        <h2>Service hours</h2>
+
+                        <div class="faq" data-keys="hours earn community service">
+                            <button class="faq-q" type="button">How are service hours earned?<span class="chev"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M7 10l5 5 5-5z" />
+                                    </svg></span></button>
+                            <div class="faq-a">
+                                <p>Hours are credited when you attend a registered event and an organizer certifies your
+                                    participation. Totals appear under <strong>Service Hours</strong>.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq" data-keys="approved pending hours status">
+                            <button class="faq-q" type="button">What do hour statuses mean?<span class="chev"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M7 10l5 5 5-5z" />
+                                    </svg></span></button>
+                            <div class="faq-a">
+                                <div class="pills">
+                                    <span class="pill ok">Approved</span>
+                                    <span class="pill pend">Pending</span>
+                                </div>
+                                <p style="margin-top:8px"><strong>Approved</strong> counts toward your total.
+                                    <strong>Pending</strong> is waiting for organizer review.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="block" id="donations">
+                        <h2>Donations</h2>
+
+                        <div class="faq" data-keys="donate donation money item">
+                            <button class="faq-q" type="button">How do I donate?<span class="chev"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M7 10l5 5 5-5z" />
+                                    </svg></span></button>
+                            <div class="faq-a">
+                                <p><strong>Money:</strong> Community → Donations → amount and purpose →
+                                    <strong>Donate</strong> → choose a payment method.</p>
+                                <p><strong>Item:</strong> switch to Item, describe the goods and purpose, then submit.
+                                    Staff will arrange pickup or drop-off. No payment is needed.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq" data-keys="payment gcash paymaya bank cash qr screenshot">
+                            <button class="faq-q" type="button">How do the payment methods work?<span class="chev"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M7 10l5 5 5-5z" />
+                                    </svg></span></button>
+                            <div class="faq-a">
+                                <ul>
+                                    <li><strong>GCash, PayMaya, Bank Transfer</strong> — Pay Now shows a QR / account
+                                        details. Pay in the app, then upload a screenshot and submit.</li>
+                                    <li><strong>Cash</strong> — Pay Now asks for your account password. Confirm, then
+                                        pay in person at Municipal Hall (Mon–Fri, 8:00 AM–5:00 PM).</li>
+                                </ul>
+                                <div class="callout warn">Donations stay <strong>Pending</strong> until municipal staff
+                                    verify them. They are generally non-refundable.</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="block" id="notifications">
+                        <h2>Notifications</h2>
+
+                        <div class="faq" data-keys="notifications bell alerts view">
+                            <button class="faq-q" type="button">Where do I see notifications?<span class="chev"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M7 10l5 5 5-5z" />
+                                    </svg></span></button>
+                            <div class="faq-a">
+                                <p>Use the <strong>bell</strong> in the header for a preview, or <strong>See All
+                                        Notifications</strong> for the full list.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq" data-keys="mark read all">
+                            <button class="faq-q" type="button">How do I mark them as read?<span class="chev"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M7 10l5 5 5-5z" />
+                                    </svg></span></button>
+                            <div class="faq-a">
+                                <p>Open a notification to mark it read, or choose <strong>Mark all read</strong>.
+                                    <strong>Clear</strong> permanently deletes them.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="block" id="troubleshooting">
+                        <h2>Troubleshooting</h2>
+
+                        <div class="faq" data-keys="forgot password reset email">
+                            <button class="faq-q" type="button">I forgot my password<span class="chev"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M7 10l5 5 5-5z" />
+                                    </svg></span></button>
+                            <div class="faq-a">
+                                <ol>
+                                    <li>On the login panel, open <strong>Forgot Password?</strong></li>
+                                    <li>Enter your registered email and send the reset link.</li>
+                                    <li>Check inbox and spam, then set a new password.</li>
+                                </ol>
+                                <div class="callout info">The email must already have an account. If nothing arrives in
+                                    a few minutes, contact support.</div>
+                            </div>
+                        </div>
+
+                        <div class="faq" data-keys="loading error browser refresh cache javascript">
+                            <button class="faq-q" type="button">The page is not loading<span class="chev"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M7 10l5 5 5-5z" />
+                                    </svg></span></button>
+                            <div class="faq-a">
+                                <ul>
+                                    <li>Refresh (F5 or Ctrl/Cmd+R)</li>
+                                    <li>Clear cache and cookies</li>
+                                    <li>Try Chrome, Firefox, or Edge with JavaScript on</li>
+                                    <li>Check your connection</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq" data-keys="volunteer application pending status">
+                            <button class="faq-q" type="button">My volunteer status has not changed<span
+                                    class="chev"><svg viewBox="0 0 24 24">
+                                        <path d="M7 10l5 5 5-5z" />
+                                    </svg></span></button>
+                            <div class="faq-a">
+                                <p>Reviews usually take <strong>1–3 business days</strong>. You will get a notification.
+                                    If it has been longer, contact support with your registered email.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq" data-keys="session logged out another device">
+                            <button class="faq-q" type="button">I was signed out unexpectedly<span class="chev"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M7 10l5 5 5-5z" />
+                                    </svg></span></button>
+                            <div class="faq-a">
+                                <p>OneVictoria allows <strong>one active session</strong> per account. Signing in on
+                                    another phone or browser ends the previous session.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="block" id="contact-support">
+                        <h2>Contact support</h2>
+                        <div class="contact">
+                            <div class="c-card">
+                                <h3>Email</h3>
+                                <p><a href="mailto:support@victoria.gov.ph">support@victoria.gov.ph</a><br>Reply in
+                                    24–48 hours</p>
+                            </div>
+                            <div class="c-card">
+                                <h3>Telephone</h3>
+                                <p><a href="tel:+63451234567">(045) 123-4567</a><br>Mon–Fri, 8:00 AM–5:00 PM</p>
+                            </div>
+                            <div class="c-card">
+                                <h3>In person</h3>
+                                <p>Municipal Hall, Victoria, Tarlac<br>Mon–Fri, 8:00 AM–5:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="cta">
+                            <div>
+                                <strong>Still need help?</strong>
+                                <p>Include your registered email and a short description of the issue.</p>
+                            </div>
+                            <a href="mailto:support@victoria.gov.ph">Email support</a>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </div>
+
+        <footer class="site">
+            <p>© 2026 Municipality of Victoria. All rights reserved.</p>
+            <nav class="links" aria-label="Legal">
+                <a href="privacy-policy.html">Privacy</a>
+                <a href="terms-of-service.html">Terms</a>
+                <span class="here">Help</span>
+                <a href="feedback.html">Feedback</a>
+            </nav>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelectorAll(".faq-q").forEach((btn) => {
+            btn.addEventListener("click", () => btn.parentElement.classList.toggle("open"));
+        });
+
+        const input = document.getElementById("helpSearch");
+        const hits = document.getElementById("searchHits");
+        const faqs = [...document.querySelectorAll(".faq")];
+        const noResults = document.getElementById("noResults");
+        const sections = [...document.querySelectorAll("section.block")];
+
+        const index = faqs.map((el) => ({
+            el,
+            q: el.querySelector(".faq-q").textContent.replace(/\s+/g, " ").trim(),
+            keys: (el.dataset.keys || "") + " " + el.textContent.toLowerCase(),
+            section: el.closest("section").id,
+        }));
+
+        function closeHits() { hits.style.display = "none"; hits.innerHTML = ""; }
+
+        function filter(q) {
+            const term = q.trim().toLowerCase();
+            let shown = 0;
+            faqs.forEach((el) => {
+                const item = index.find((i) => i.el === el);
+                const ok = !term || item.keys.includes(term) || item.q.toLowerCase().includes(term);
+                el.hidden = !ok;
+                if (ok) shown++;
+            });
+            sections.forEach((sec) => {
+                const any = [...sec.querySelectorAll(".faq")].some((f) => !f.hidden);
+                sec.style.display = !term || any || sec.id === "contact-support" ? "" : "none";
+            });
+            noResults.style.display = term && shown === 0 ? "block" : "none";
+        }
+
+        input.addEventListener("input", () => {
+            const q = input.value.trim();
+            filter(q);
+            if (q.length < 2) { closeHits(); return; }
+            const matches = index.filter((i) => i.keys.includes(q.toLowerCase()) || i.q.toLowerCase().includes(q.toLowerCase()));
+            if (!matches.length) {
+                hits.innerHTML = '<div class="empty">No matches</div>';
+            } else {
+                hits.innerHTML = matches.slice(0, 8).map((m) =>
+                    `<a href="#${m.section}" data-q="${m.q.replace(/"/g, "&quot;")}">${m.q}</a>`
+                ).join("");
+                hits.querySelectorAll("a").forEach((a) => {
+                    a.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        const target = index.find((i) => i.q === a.dataset.q);
+                        if (target) {
+                            target.el.classList.add("open");
+                            target.el.scrollIntoView({ behavior: "smooth", block: "center" });
+                        }
+                        closeHits();
+                    });
+                });
+            }
+            hits.style.display = "block";
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!e.target.closest(".search")) closeHits();
+        });
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "/" && document.activeElement !== input) {
+                e.preventDefault();
+                input.focus();
+            }
+            if (e.key === "Escape") {
+                closeHits();
+                input.blur();
+            }
+        });
+
+        const tocLinks = [...document.querySelectorAll(".toc a")];
+        const spy = () => {
+            const y = window.scrollY + 90;
+            let current = tocLinks[0];
+            tocLinks.forEach((link) => {
+                const id = link.getAttribute("href").slice(1);
+                const sec = document.getElementById(id);
+                if (sec && sec.offsetTop <= y) current = link;
+            });
+            tocLinks.forEach((l) => l.classList.toggle("active", l === current));
+        };
+        window.addEventListener("scroll", spy, { passive: true });
+    </script>
+</body>
+
+</html>
