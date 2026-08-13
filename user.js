@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-// import { firebaseConfig } from "./firebase-config.js";
+import { firebaseConfig } from "./firebase-config/firebase-config.js";
 import {
   getFirestore,
   collection,
@@ -32,16 +32,6 @@ import {
   EmailAuthProvider,
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
-// ===== FIREBASE INITIALIZATION =====
-const firebaseConfig = {
-  apiKey: "AIzaSyD6rgutkYK7MZ3F0Xne6Zs4PyEiPME7ePM",
-  authDomain: "onevictoria-23409.firebaseapp.com",
-  projectId: "onevictoria-23409",
-  storageBucket: "onevictoria-23409.firebasestorage.app",
-  messagingSenderId: "334731169631",
-  appId: "1:334731169631:web:7484599232fef8b06eb0ea",
-  measurementId: "G-0ML9K6JSK8",
-};
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
